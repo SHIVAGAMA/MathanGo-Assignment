@@ -1,0 +1,81 @@
+import json
+
+# Define the questions and answers
+questions = [
+    {
+        "id": 481221,
+        "question": "If Δ=|a11 a12 a13 a21 a22 a23 a31 a32 a33| and Aij is co-factor of aij, then the value of Δ is equal to",
+        "options": {
+            "A": "a11A31 + a12A32 + a13A33",
+            "B": "a11A11 + a12A21 + a13A31",
+            "C": "a21A11 + a22A12 + a23A13",
+            "D": "a11A11 + a21A21 + a31A31"
+        },
+        "answer": "D",
+        "solution": "Δ = a11A11 + a21A21 + a31A31"
+    },
+    {
+        "id": 481222,
+        "question": "If the matrix [0 -1 3x 1 y -5 -6 5 0] is skew symmetric, then 6x+y is equal to",
+        "options": {
+            "A": "6",
+            "B": "12",
+            "C": "18",
+            "D": "2"
+        },
+        "answer": "B",
+        "solution": "y=0 and 3x=6. So, 6x+y=12"
+    },
+    {
+        "id": 481223,
+        "question": "|3 -4| = |2x 5| then |x| is equal to",
+        "options": {
+            "A": "√(5/2)",
+            "B": "4",
+            "C": "2√2",
+            "D": "2"
+        },
+        "answer": "C",
+        "solution": "|3 -4| = |2x 5|. Therefore, 11 = 2x^2 - 5. Hence, x^2 = 8. Thus, |x| = 2√2"
+    },
+    {
+        "id": 481224,
+        "question": "Which of the following statements are true?",
+        "options": {
+            "A": "A square matrix A is said to be non-singular if |A| = 0",
+            "B": "A square matrix A is invertible if and only if A is non-singular matrix",
+            "C": "If elements of a row are multiplied with cofactors of any other row, then their sum is zero",
+            "D": "A is square matrix of order 3 then |Adj.(A)| = |A|^3"
+        },
+        "answer": "B",
+        "solution": "Statement A is incorrect. Statement B is correct. Statement C is correct. Statement D is incorrect."
+    },
+    {
+        "id": 481225,
+        "question": "The interval in which y = x^2 * e^(2x) is increasing is",
+        "options": {
+            "A": "(-∞, -1)",
+            "B": "(-1, ∞)",
+            "C": "(-∞, -1) ∪ (0, ∞)",
+            "D": "(-∞, 0) ∪ (1, ∞)"
+        },
+        "answer": "C",
+        "solution": "The derivative is positive for x in (-∞, -1) ∪ (0, ∞)"
+    },
+    {
+        "id": 481226,
+        "question": "If x = t^3, y = t^4, then d^2y/dx^2 at t = 2 is",
+        "options": {
+            "A": "8/3",
+            "B": "1/9",
+            "C": "2/9",
+            "D": "9/16"
+        },
+        "answer": "B",
+        "solution": "At t=2, d^2y/dx^2 = 1/9"
+    }
+]
+
+# Convert to JSON
+json_questions = json.dumps(questions, indent=4)
+print(json_questions)
